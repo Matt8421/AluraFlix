@@ -1,23 +1,27 @@
+
 import { Link } from "react-router-dom";
-import logo from "../../public/img/LogoMatt.png";
 import styled from "styled-components";
-const Logo = styled.img`
+
+// Define el estilo para el texto del logo
+const LogoText = styled.h1`
+  font-size: 2rem; /* Tamaño del texto */
+  color: #1e2a44; /* Color personalizado (puedes cambiarlo) */
+  font-weight: bold; /* Asegura que el texto esté en negrita */
+  margin: 0;
   display: flex;
-  width: 50px;
-  height: 50px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  
   @media screen and (max-width: 768px) {
-    width: 10.5208rem;
-    height: 2.5rem;
+    font-size: 1.5rem; /* Tamaño reducido para pantallas pequeñas */
   }
 `;
 
 const NavBar = () => {
   return (
     <Link to="/">
-      <Logo className="header__logo" src={logo} alt="" />
+      <LogoText className="header__logo">MattDeveloper</LogoText>
     </Link>
   );
 };
